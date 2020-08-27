@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Tapa na Luisa</title>    
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function iniciarJogo() {    
+            var nivel = document.getElementById('niveis').value
+            if (nivel === 'selecione') {
+                alert('[ERRO] Escolha um nível')
+            } else if (nivel === 'normal'){
+                window.location.href = "jogo.html?" + nivel   
+            } else if (nivel === 'hard'){
+                window.location.href = "jogo.html?" + nivel
+            } else {
+                window.location.href = "jogo.html?" + nivel
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="background">        
+        <div class="imagem-central">
+            <img src="imagens/game.png" alt="">
+        </div>
+        <select class="niveis" id="niveis">
+            <option value="selecione">-- Selecione o nível --</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+            <option value="chuck">Chuck Norris</option>
+        </select><br>
+        <button class="btn-reiniciar" onclick="iniciarJogo()">INICIAR</button>
+    </div>
+</body>
+</html>
+
+<!-- written by Bruna Fachinetti for Udemy class -->
